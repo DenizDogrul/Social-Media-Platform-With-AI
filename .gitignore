@@ -102,3 +102,4 @@ build/
 hardware/
 secretkey.txt
 testo.txt
+frontend/src/components/AmbientThemeController.tsx
