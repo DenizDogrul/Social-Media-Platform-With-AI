@@ -97,3 +97,8 @@ build/
 # Raspberry Pi specific
 *.img
 *.iso
+
+# Hardware files (keep local, don't commit to GitHub)
+hardware/
+secretkey.txt
+testo.txt
