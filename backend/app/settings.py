@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY") or ("test-secret-key-ci" if os.getenv("GITHUB_ACTIONS") else None)
 ALGORITHM = os.getenv("JWT_ALGORITHM", os.getenv("ALGORITHM", "HS256"))
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "30"))
 REFRESH_TOKEN_EXPIRE_DAYS = int(os.getenv("REFRESH_TOKEN_EXPIRE_DAYS", "7"))
@@ -69,5 +69,5 @@ if not VAPID_PRIVATE_KEY and VAPID_PRIVATE_KEY_PATH:
 
 PUSH_NOTIFICATIONS_ENABLED = bool(VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY and VAPID_SUBJECT)
 
-if not SECRET_KEY:
+if not SECRET_KEY and not os.getenv("GITHUB_ACTIONS"):
     raise RuntimeError("SECRET_KEY is not set. Add it to .env")

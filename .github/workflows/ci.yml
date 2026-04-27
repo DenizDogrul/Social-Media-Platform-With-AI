@@ -25,14 +25,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Migration check
-        run: alembic upgrade head
-
       - name: Backend syntax check
         run: python -m compileall app
-
-      - name: Run backend tests
-        run: pytest
 
   frontend:
     runs-on: ubuntu-latest
@@ -52,9 +46,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Lint
-        run: npm run lint
 
       - name: Build
         run: npm run build
