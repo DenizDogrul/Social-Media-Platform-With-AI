@@ -1,180 +1,160 @@
-# Sosyal Medya Platformu - AI Destekli İçerik Etiketleme
+# Social Media Platform with AI-Powered Content Tagging
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
-[![React](https://img.shields.io/badge/React-19.2.4-blue.svg)](https://reactjs.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.135.2-green.svg)](https://fastapi.tiangolo.com/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue.svg)](https://www.typescriptlang.org/)
+A modern, real-time social media platform built with FastAPI and React. Features AI-powered automatic content tagging, real-time messaging, and interactive social features.
 
-Modern, gerçek zamanlı sosyal medya platformu. Yapay zeka destekli otomatik içerik etiketleme, gerçek zamanlı mesajlaşma ve etkileşim özellikleri ile kullanıcı deneyimini geliştirir.
+## Features
 
-## ✨ Özellikler
+### Core Functionality
+- **User Authentication**: Secure JWT-based login/registration system
+- **Posts & Content**: Share text, images, and media content
+- **Social Interactions**: Like posts, leave comments, follow users
+- **Stories**: Share temporary content with friends
+- **Real-time Notifications**: Live notification system for user activities
 
-### 🔐 Kimlik Doğrulama & Güvenlik
-- JWT tabanlı güvenli giriş/çıkış sistemi
-- Refresh token desteği
-- Şifre hash'leme (bcrypt)
-- Güvenli API endpoints
+### AI Integration
+- **Smart Tagging**: Automatic topic detection and tagging using OpenAI GPT
+- **Content Analysis**: Intelligent categorization of post content
 
-### 📱 Sosyal Medya Özellikleri
-- **Gönderiler**: Metin, resim ve medya içeriği paylaşımı
-- **Beğeni Sistemi**: Gönderilere beğeni ekleme/çıkarma
-- **Yorumlar**: Gönderilere yorum yapma ve etkileşim
-- **Takip Sistemi**: Kullanıcıları takip etme/çıkarma
-- **Hikayeler**: Geçici içerik paylaşımı
-- **Bildirimler**: Gerçek zamanlı bildirim sistemi
+### Real-time Features
+- **WebSocket Communication**: Live messaging and notifications
+- **Push Notifications**: Browser-based push notifications
+- **Live Chat**: Real-time messaging between users
 
-### 🤖 Yapay Zeka Entegrasyonu
-- **Otomatik Etiketleme**: OpenAI GPT kullanarak gönderi içeriğine akıllı etiketler ekleme
-- **Konu Tespiti**: İçerik analizi ile ilgili konuların belirlenmesi
+### User Interface
+- **Responsive Design**: Mobile and desktop compatible
+- **Modern UI**: Clean, intuitive user interface
+- **Accessibility**: WCAG compliant design
 
-### ⚡ Gerçek Zamanlı Özellikler
-- **WebSocket Bağlantısı**: Anlık mesajlaşma ve bildirimler
-- **Push Notifications**: Tarayıcı bildirimleri
-- **Canlı Sohbet**: Kullanıcılar arası gerçek zamanlı mesajlaşma
-
-### 🎨 Kullanıcı Arayüzü
-- **Responsive Tasarım**: Mobil ve masaüstü uyumlu
-- **Modern UI**: Temiz ve kullanıcı dostu arayüz
-- **Gece/Gündüz Modu**: Ambient light adaptasyonu (donanım entegrasyonu ile)
-- **Erişilebilirlik**: WCAG uyumlu tasarım
-
-## 🛠️ Teknoloji Stack'i
+## Tech Stack
 
 ### Backend
 - **Python 3.8+**
-- **FastAPI**: Yüksek performanslı REST API framework
-- **SQLAlchemy**: ORM ve veritabanı işlemleri
-- **Alembic**: Veritabanı migrasyonları
-- **WebSocket**: Gerçek zamanlı iletişim
-- **OpenAI API**: Yapay zeka etiketleme
+- **FastAPI**: High-performance REST API framework
+- **SQLAlchemy**: ORM for database operations
+- **Alembic**: Database migration management
+- **WebSocket**: Real-time communication
+- **OpenAI API**: AI-powered content tagging
 
 ### Frontend
 - **React 19.2.4**: Modern JavaScript framework
-- **TypeScript 5.9.3**: Tip güvenliği
-- **Vite**: Hızlı geliştirme ve build tool
-- **Zustand**: State management
-- **Axios**: HTTP client
-- **React Router**: Sayfa yönlendirme
+- **TypeScript 5.9.3**: Type-safe development
+- **Vite**: Fast build tool and development server
+- **Zustand**: Lightweight state management
+- **Axios**: HTTP client for API calls
+- **React Router**: Client-side routing
 
-### Veritabanı
-- **SQLite**: Geliştirme ortamı
-- **PostgreSQL**: Üretim ortamı desteği
+### Database
+- **SQLite**: Development environment
+- **PostgreSQL**: Production-ready database support
 
-### Güvenlik & Kalite
-- **pytest**: Unit testing
-- **ESLint**: Kod kalitesi
-- **Pre-commit hooks**: Kod standartları
+## Installation
 
-## 🚀 Kurulum
-
-### Ön Gereksinimler
-
-- Python 3.8+
-- Node.js 18+
+### Prerequisites
+- Python 3.8 or higher
+- Node.js 18 or higher
 - Git
 
-### Backend Kurulumu
+### Backend Setup
 
 ```bash
-# Repository'yi klonlayın
+# Clone the repository
 git clone https://github.com/DenizDogrul/Social-Media-Platform-With-AI.git
 cd Social-Media-Platform-With-AI
 
-# Backend dizinine gidin
+# Navigate to backend directory
 cd backend
 
-# Virtual environment oluşturun
+# Create virtual environment
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Bağımlılıkları yükleyin
+# Install dependencies
 pip install -r requirements.txt
 
-# Environment variables'ları ayarlayın
+# Set up environment variables
 cp .env.example .env
-# .env dosyasını düzenleyin (API keys, veritabanı ayarları)
+# Edit .env file with your API keys and database settings
 ```
 
-### Frontend Kurulumu
+### Frontend Setup
 
 ```bash
-# Frontend dizinine gidin
+# Navigate to frontend directory
 cd frontend
 
-# Bağımlılıkları yükleyin
+# Install dependencies
 npm install
 
-# Geliştirme sunucusunu başlatın
+# Start development server
 npm run dev
 ```
 
-### Veritabanı Kurulumu
+### Database Setup
 
 ```bash
-# Backend dizininde
+# In backend directory
 cd backend
 
-# Veritabanı migrasyonlarını çalıştırın
+# Run database migrations
 alembic upgrade head
 
-# Demo verilerini yükleyin (opsiyonel)
+# Optional: Load demo data
 python scripts/seed_demo.py
 ```
 
-## 🔧 Yapılandırma
+## Configuration
 
 ### Environment Variables
 
-Backend için `.env` dosyası oluşturun:
+Create a `.env` file in the backend directory:
 
 ```env
-# Güvenlik
+# Security
 SECRET_KEY=your-secret-key-here
 JWT_ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 REFRESH_TOKEN_EXPIRE_DAYS=7
 
-# Veritabanı
+# Database
 DATABASE_URL=sqlite:///./app.db
 
 # OpenAI API
 OPENAI_API_KEY=sk-your-openai-api-key
 
-# Diğer ayarlar
+# Application
 APP_ENV=development
 DEBUG=true
 ```
 
-Frontend için `.env` dosyası oluşturun:
+Create a `.env` file in the frontend directory:
 
 ```env
 VITE_API_BASE_URL=http://localhost:8000
 ```
 
-## 📖 Kullanım
+## Usage
 
-### Geliştirme Ortamı
+### Development Environment
 
 ```bash
-# Backend'i başlatın
+# Start backend server
 cd backend
 uvicorn app.main:app --reload
 
-# Frontend'i başlatın
+# Start frontend server
 cd frontend
 npm run dev
 ```
 
-Uygulamaya erişim:
+Access the application:
 - Frontend: http://localhost:5173
 - Backend API: http://localhost:8000
-- API Dokümantasyonu: http://localhost:8000/docs
+- API Documentation: http://localhost:8000/docs
 
-### Üretim Ortamı
+### Production Deployment
 
 ```bash
-# Backend build
+# Backend deployment
 cd backend
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 
@@ -184,78 +164,60 @@ npm run build
 npm run preview
 ```
 
-## 📚 API Dokümantasyonu
+## API Documentation
 
-### Ana Endpoints
+### Main Endpoints
 
-#### Kimlik Doğrulama
-- `POST /auth/login` - Kullanıcı girişi
-- `POST /auth/register` - Kullanıcı kaydı
-- `POST /auth/refresh` - Token yenileme
-- `POST /auth/logout` - Çıkış
+#### Authentication
+- `POST /auth/login` - User login
+- `POST /auth/register` - User registration
+- `POST /auth/refresh` - Token refresh
+- `POST /auth/logout` - User logout
 
-#### Gönderiler
-- `GET /posts` - Gönderileri listele
-- `POST /posts` - Yeni gönderi oluştur
-- `GET /posts/{id}` - Gönderi detayı
-- `PUT /posts/{id}` - Gönderi güncelle
-- `DELETE /posts/{id}` - Gönderi sil
+#### Posts
+- `GET /posts` - List posts
+- `POST /posts` - Create new post
+- `GET /posts/{id}` - Get post details
+- `PUT /posts/{id}` - Update post
+- `DELETE /posts/{id}` - Delete post
 
-#### Etkileşim
-- `POST /posts/{id}/like` - Gönderi beğen
-- `DELETE /posts/{id}/like` - Beğeniyi kaldır
-- `POST /posts/{id}/comments` - Yorum ekle
-- `GET /posts/{id}/comments` - Yorumları listele
+#### Interactions
+- `POST /posts/{id}/like` - Like a post
+- `DELETE /posts/{id}/like` - Unlike a post
+- `POST /posts/{id}/comments` - Add comment
+- `GET /posts/{id}/comments` - List comments
 
-#### Gerçek Zamanlı
-- `WebSocket /ws/notifications` - Bildirimler
-- `WebSocket /ws/messages` - Mesajlaşma
+#### Real-time
+- `WebSocket /ws/notifications` - Notification stream
+- `WebSocket /ws/messages` - Message stream
 
-Detaylı API dokümantasyonu için: http://localhost:8000/docs
+For detailed API documentation, visit: http://localhost:8000/docs
 
-## 🧪 Testler
+## Testing
 
 ```bash
-# Backend testlerini çalıştırın
+# Run backend tests
 cd backend
 pytest tests/ -v
 
-# Frontend testlerini çalıştırın
+# Run frontend linting
 cd frontend
 npm run lint
 ```
 
-## 🤝 Katkıda Bulunma
+## Contributing
 
-1. Fork edin
-2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Commit edin (`git commit -m 'Add amazing feature'`)
-4. Push edin (`git push origin feature/amazing-feature`)
-5. Pull Request oluşturun
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
 
-### Geliştirme Standartları
+## License
 
-- **Kod Kalitesi**: ESLint ve Black kullanımı zorunlu
-- **Testler**: Yeni özellikler için test yazın
-- **Commit Mesajları**: Anlamlı ve açıklayıcı commit mesajları
-- **Dokümantasyon**: Yeni API'ler için dokümantasyon güncelleyin
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 📄 Lisans
+## Author
 
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
-
-## 👥 Yazar
-
-**Deniz Doğru** - [GitHub](https://github.com/DenizDogrul)
-
-## 🙏 Teşekkürler
-
-- [FastAPI](https://fastapi.tiangolo.com/) ekibine
-- [React](https://reactjs.org/) topluluğuna
-- [OpenAI](https://openai.com/) API'sine
-- Tüm katkıda bulunanlara
-
----
-
-⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!</content>
+**Deniz Doğru** - [GitHub](https://github.com/DenizDogrul)</content>
 <parameter name="filePath">c:\Users\Deniz\OneDrive\Masaüstü\tez\README.md
