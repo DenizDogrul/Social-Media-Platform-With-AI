@@ -219,5 +219,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Author
 
-**Deniz Doğru** - [GitHub](https://github.com/DenizDogrul)</content>
-<parameter name="filePath">c:\Users\Deniz\OneDrive\Masaüstü\tez\README.md
+**Deniz Dogrul** 
