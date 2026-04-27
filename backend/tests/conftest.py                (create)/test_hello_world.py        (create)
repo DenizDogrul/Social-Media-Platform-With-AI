@@ -1,0 +1,28 @@
+pytest.ini
+[pytest]
+testpaths = tests
+
+tests/conftest.py
+import pytest
+from app.database import get_db, Base
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+@pytest.fixture(scope='session')
+def db():
+    engine = create_engine('sqlite:///test.db')
+    Base.metadata.create_all(bind=engine)
+    connection = engine.connect()
+    transaction = connection.begin()
+    Session = sessionmaker(bind=connection)
+    session = Session()
+
+    yield session
+
+    session.close()
+    transaction.rollback()
+    connection.close()
+
+tests/test_hello_world.py
+def test_hello_world():
+    assert True
